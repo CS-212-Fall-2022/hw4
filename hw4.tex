@@ -1,0 +1,46 @@
+\documentclass[addpoints]{exam}
+\usepackage{amsmath, amsfonts}
+\usepackage{forest}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{titling}
+
+% Header and footer.
+\pagestyle{headandfoot}
+\runningheadrule
+\runningfootrule
+\runningheader{CS 212, Fall 2022}{HW 4: Complexity and Reducibility}{\theauthor}
+\runningfooter{}{Page \thepage\ of \numpages}{}
+\firstpageheader{}{}{}
+
+\boxedpoints
+
+\title{Homework 4: Complexity and Reducibility}
+\author{ungraded} % <=== replace with your team name
+\date{CS 212 Nature of Computation\\Habib University\\Fall 2022}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+        \question[10] Define a \textit{coding} $\kappa$ to be a mapping,  $\kappa:\Sigma^*\rightarrow \Sigma^*$ (not necessarily one-to-one). For some string $x = x_1x_2\cdots x_n\in\Sigma^*$, we define $\kappa(x) = \kappa(x_1)\kappa(x_2)\cdots\kappa(x_n)$ and for a language $L\subseteq \Sigma^*$, we define $\kappa(L) = \{\kappa(x): x\in L \}$. Show that the class NP is closed under \textit{codings}. 
+
+
+\question[10] Show that 2SAT $\in$  P, where 2SAT $ = \{ \phi \mid \phi \text{ is a satisfiable 2cnf-formula}\}$. You must give a high level description of the algorithm, and show that it runs in polynomial time. \\ \textit{Hint}: A disjunctive clause $(x_1 \vee x_2) \text{ is logically equivalent to } \neg x_1 \implies x_2 \text{ and } \neg x_2 \implies x_1$.
+
+\question[10] Let $A$ be an NP-complete problem and $B$ be a coNP-complete problem. Show that, ``NP = coNP if and only if $A \leq_\text{P} B$ and $B \leq_\text{P} A$.''
+
+\question[10] Given TAUT $ = \{ \phi \mid \phi \text{ is a tautological boolean formula} \}$, show that $\overline{\text{TAUT}} \in$ NP-COMPLETE.
+  
+
+\end{questions}
+
+\noindent\underline{Credits}: Some of these problems are courtesy of \href{https://www.iba.edu.pk/faculty-profile.php?ftype=&id=shahidhussain}{Dr. Shahid Hussain}.
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
